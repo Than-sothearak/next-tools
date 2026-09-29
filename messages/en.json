@@ -1,0 +1,35 @@
+{
+  "navigation": {
+    "home": "Home",
+    "tools": "All tools",
+    "pdf": "PDF Tools",
+    "image": "Image Tools",
+    "video": "Video Tools",
+    "audio": "Audio Tools",
+    "developer": "Developer Tools"
+  },
+  "brand": {
+    "name": "Tools",
+    "tagline": "Simple online tools for everyday work."
+  },
+  "home": {
+    "title": "Simple tools. Get things done faster.",
+    "description": "Convert, compress, edit, and manage your files directly from your browser.",
+    "search": "Search tools...",
+    "popular": "Popular tools",
+    "categories": "Browse by category",
+    "why": "Why Tools?"
+  },
+  "actions": {
+    "signIn": "Sign in",
+    "choose": "Choose files",
+    "process": "Process",
+    "download": "Download",
+    "copy": "Copy",
+    "comingSoon": "Coming soon"
+  },
+  "privacy": {
+    "title": "Privacy",
+    "description": "Your files never leave your device when browser processing is available."
+  }
+}
