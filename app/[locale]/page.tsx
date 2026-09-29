@@ -1,4 +1,4 @@
-import { HomePage } from "@/components/site";
+import { HomePage } from "@/components/home-page";
 import { validLocale } from "@/lib/i18n";
 export default async function Page({
   params,

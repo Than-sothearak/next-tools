@@ -1,6 +1,6 @@
 @import "tailwindcss";
 :root{--ink:#171a1f;--muted:#737b87;--line:#e7e9ed;--soft:#f7f8fa;--accent:#265d50}
-*{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:#fff;color:var(--ink);font-family:Arial,Helvetica,sans-serif} button,input,textarea,select{font:inherit} button{cursor:pointer} ::selection{background:#dcebe6}
+*{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:#fff;color:var(--ink);font-family:Arial,Helvetica,var(--font-noto-sans-khmer),sans-serif} button,input,textarea,select{font:inherit} button{cursor:pointer} ::selection{background:#dcebe6}
 .shell{width:min(1180px,calc(100% - 48px));margin:auto}.muted{color:var(--muted)}.card{border:1px solid var(--line);border-radius:14px;background:#fff}.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:1px solid var(--line);border-radius:9px;padding:10px 15px;background:white;color:var(--ink);font-weight:600;transition:.15s}.btn:hover{border-color:#aeb6c0;background:#fafafa}.btn-primary{background:#1d2724;color:white;border-color:#1d2724}.btn-primary:hover{background:#35443f;border-color:#35443f}.field{width:100%;border:1px solid var(--line);border-radius:9px;padding:11px 13px;background:#fff;outline:none}.field:focus{border-color:#6b8f83;box-shadow:0 0 0 3px #e5efeb}.tool-area{min-height:230px}.drop{border:1.5px dashed #cbd0d7;border-radius:12px;background:#fafbfc;transition:.15s}.drop:hover{border-color:#75988c;background:#f6faf8}.prose-lite p{line-height:1.7}
 
 

@@ -1,6 +1,7 @@
 "use client";
 import {
   useRef,
+  useCallback,
   useState,
   useEffect,
   ChangeEvent,
@@ -24,7 +25,9 @@ import {
 import { useAuth, useClerk } from "@clerk/nextjs";
 import { tools, categoryLabel, getTool } from "@/lib/tools";
 import { copy, Locale } from "@/lib/i18n";
-import { Navbar, Footer, ToolGrid } from "@/components/site";
+import { Navbar } from "@/components/navbar";
+import { Footer } from "@/components/footer";
+import { ToolGrid } from "@/components/tool-grid";
 const isClerk = Boolean(process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY);
 export function ActionButton({
   onClick,
@@ -90,6 +93,7 @@ export type ToolProcessor = (
   setResult: (value: string) => void,
 ) => Promise<void>;
 export type ToolControlsProps = {
+  files: File[];
   locale: Locale;
   text: string;
   setText: (value: string) => void;
@@ -263,8 +267,8 @@ function ToolRunner({
     return () => window.removeEventListener("keydown", closeOnEscape);
   }, [previewDownload]);
 
-  const update = (key: string, value: string | boolean) =>
-    setOptions((current) => ({ ...current, [key]: value }));
+  const update = useCallback((key: string, value: string | boolean) =>
+    setOptions((current) => ({ ...current, [key]: value })), []);
   const addFiles = (incoming: FileList | File[] | null) => {
     if (!incoming) return;
     const incomingFiles = Array.from(incoming);
@@ -377,6 +381,7 @@ function ToolRunner({
       )}
       {Controls && (
         <Controls
+          files={files}
           locale={locale}
           text={text}
           setText={setText}

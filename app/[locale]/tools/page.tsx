@@ -1,4 +1,4 @@
-import { ToolListPage } from "@/components/site";
+import { ToolListPage } from "@/components/tool-list-page";
 import { validLocale } from "@/lib/i18n";
 export default async function Page({
   params,
